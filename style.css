@@ -1,52 +1,86 @@
-body{
+body {
     background-color: antiquewhite;
     display: flex;
     justify-content: center;
-    height: 100vh;
     align-items: center;
+    min-height: 100vh; /* responsive */
+    padding: 10px;     /* for small screens */
+    margin: 0;
 }
-form{
+
+form {
     background-color: aqua;
-    width: 60vh;
+    width: 90%;              /* responsive width */
+    max-width: 400px;        /* prevent over-expansion */
     text-align: center;
     box-shadow: 6px 6px 14px rgb(208, 85, 85);
-    padding: 25px;
-    height: 50vh;
+    padding: 20px;
+    border-radius: 10px;
 }
-h1{
+
+h1 {
     color: rgb(78, 0, 129);
-    font-family: 'Story Script';
-    font-size: 2.8em;
+    font-family: 'Story Script', cursive;
+    font-size: clamp(1.8rem, 5vw, 2.8rem); /* scales */
+    margin-bottom: 15px;
 }
-#textbox{
-    margin: 12px 12px 24px;
-    font-size: 1.2em;
+
+#textbox {
+    margin: 12px 0 24px;
+    font-size: 1rem;
     text-align: center;
-    width: 60%;
-    height: 10%;
+    width: 100%;   /* full responsive */
+    max-width: 280px;
+    padding: 10px;
     background-color: rgba(254, 215, 159, 0.836);
-    border: 2px solid  rgb(255, 186, 88) ;
+    border: 2px solid rgb(255, 186, 88);
     border-radius: 5px;
 }
-label{
+
+label {
     font-weight: bolder;
-    font-size: 2em;
-    padding: 2px 0px;
-    margin: 2px 0px;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    margin: 10px 0;
 }
+
 input[type="radio"] {
-  transform: scale(1.8);
-  margin: 0px 4px 0px;
+    transform: scale(1.3);
+    margin: 0px 6px;
 }
-button{
-    font-size: 1em;
+
+button {
+    font-size: 1rem;
     border: 2px solid rgb(117, 133, 47);
     border-radius: 5px;
     font-weight: 600;
-    padding: 6px;
+    padding: 8px 12px;
+    background: white;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
 }
-p{
-    font-size: 2em;
+button:hover {
+    background: rgb(117, 133, 47);
+    color: white;
+}
+
+p {
+    font-size: clamp(1rem, 3.5vw, 2em);
     font-weight: 700;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* ✅ Extra tweaks for very small screens */
+@media (max-width: 600px) {
+    form {
+        width: 100%;
+        padding: 15px;
+    }
+    #textbox {
+        width: 100%;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+    }
 }
