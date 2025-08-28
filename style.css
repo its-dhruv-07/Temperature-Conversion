@@ -1,0 +1,52 @@
+body{
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+form{
+    background-color: aqua;
+    width: 60vh;
+    text-align: center;
+    box-shadow: 6px 6px 14px rgb(208, 85, 85);
+    padding: 25px;
+    height: 50vh;
+}
+h1{
+    color: rgb(78, 0, 129);
+    font-family: 'Story Script';
+    font-size: 2.8em;
+}
+#textbox{
+    margin: 12px 12px 24px;
+    font-size: 1.2em;
+    text-align: center;
+    width: 60%;
+    height: 10%;
+    background-color: rgba(254, 215, 159, 0.836);
+    border: 2px solid  rgb(255, 186, 88) ;
+    border-radius: 5px;
+}
+label{
+    font-weight: bolder;
+    font-size: 2em;
+    padding: 2px 0px;
+    margin: 2px 0px;
+}
+input[type="radio"] {
+  transform: scale(1.8);
+  margin: 0px 4px 0px;
+}
+button{
+    font-size: 1em;
+    border: 2px solid rgb(117, 133, 47);
+    border-radius: 5px;
+    font-weight: 600;
+    padding: 6px;
+}
+p{
+    font-size: 2em;
+    font-weight: 700;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
